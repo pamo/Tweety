@@ -41,14 +41,6 @@
     
     UINib *customNib = [UINib nibWithNibName:@"TweetCell" bundle:nil];
     [self.tableView registerNib: customNib forCellReuseIdentifier:@"TweetCell"];
-
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,7 +73,7 @@
     cell.tweetContent.text = tweet.text;
     cell.tweetTimeStamp.text = tweet.timestamp;
     [cell.profilePic setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:tweet.profilePic]] placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-        NSLog(@"Successful: %@", response);
+        cell.profilePic.image = image;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
         NSLog(@"%@", error);
     }];
