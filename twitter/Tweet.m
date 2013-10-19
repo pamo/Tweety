@@ -20,8 +20,12 @@
     return [self.data valueOrNilForKeyPath:@"profile_image_url"];
 }
 - (NSString *)timestamp {
-    return [self.data valueOrNilForKeyPath:@"created_at"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    NSDate *date = [dateFormatter dateFromString:[self.data valueOrNilForKeyPath:@"created_at"]];
+    [dateFormatter setDateFormat:@"MM-dd-yy"];
+    return [dateFormatter stringFromDate:date];
 }
+
 
 + (NSMutableArray *)tweetsWithArray:(NSArray *)array {
     NSMutableArray *tweets = [[NSMutableArray alloc] initWithCapacity:array.count];
