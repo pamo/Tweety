@@ -13,6 +13,15 @@
 - (NSString *)text {
     return [self.data valueOrNilForKeyPath:@"text"];
 }
+- (NSString *)username {
+    return [self.data valueOrNilForKeyPath:@"name"];
+}
+- (NSString *)profilePic {
+    return [self.data valueOrNilForKeyPath:@"profile_image_url"];
+}
+- (NSString *)timestamp {
+    return [self.data valueOrNilForKeyPath:@"created_at"];
+}
 
 + (NSMutableArray *)tweetsWithArray:(NSArray *)array {
     NSMutableArray *tweets = [[NSMutableArray alloc] initWithCapacity:array.count];
