@@ -8,6 +8,7 @@
 
 #import "TimelineVC.h"
 #import "TweetCell.h"
+#import <UIImageView+AFNetworking.h>
 
 @interface TimelineVC ()
 
@@ -76,9 +77,14 @@
 
     Tweet *tweet = self.tweets[indexPath.row];
 
-    cell.tweetContent.text = tweet.text;
     cell.usernameLabel.text = tweet.username;
+    cell.tweetContent.text = tweet.text;
     cell.tweetTimeStamp.text = tweet.timestamp;
+    [cell.profilePic setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:tweet.profilePic]] placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        NSLog(@"Successful: %@", response);
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        NSLog(@"%@", error);
+    }];
     
     return cell;
 }
@@ -156,7 +162,7 @@
 }
 
 - (void)reload {
-    [[TwitterClient instance] homeTimelineWithCount:2 sinceId:0 maxId:0 success:^(AFHTTPRequestOperation *operation, id response) {
+    [[TwitterClient instance] homeTimelineWithCount:20 sinceId:0 maxId:0 success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"%@", response);
         self.tweets = [Tweet tweetsWithArray:response];
         [self.tableView reloadData];
