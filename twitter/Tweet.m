@@ -14,15 +14,21 @@
     return [self.data valueOrNilForKeyPath:@"text"];
 }
 - (NSString *)username {
-    return [self.data valueOrNilForKeyPath:@"name"];
+    return [self.data valueOrNilForKeyPath:@"user.name"];
 }
 - (NSString *)profilePic {
-    return [self.data valueOrNilForKeyPath:@"profile_image_url"];
+    return [self.data valueOrNilForKeyPath:@"user.profile_image_url"];
 }
 - (NSString *)timestamp {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    NSDate *date = [dateFormatter dateFromString:[self.data valueOrNilForKeyPath:@"created_at"]];
     [dateFormatter setDateFormat:@"MM-dd-yy"];
+    
+    NSString *rawTimestamp = [self.data valueOrNilForKeyPath:@"created_at"];
+    NSDate *date = [dateFormatter dateFromString:rawTimestamp];
+
+    NSString *formattedDate = [dateFormatter stringFromDate:date];
+    NSLog(@"%@", rawTimestamp);
+    NSLog(@"%@", formattedDate);
     return [dateFormatter stringFromDate:date];
 }
 
