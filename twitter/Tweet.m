@@ -21,15 +21,14 @@
 }
 - (NSString *)timestamp {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MM-dd-yy"];
-    
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     NSString *rawTimestamp = [self.data valueOrNilForKeyPath:@"created_at"];
     NSDate *date = [dateFormatter dateFromString:rawTimestamp];
-
+    
     NSString *formattedDate = [dateFormatter stringFromDate:date];
     NSLog(@"%@", rawTimestamp);
     NSLog(@"%@", formattedDate);
-    return [dateFormatter stringFromDate:date];
+    return [[self.data valueOrNilForKeyPath:@"created_at"] substringToIndex:10];
 }
 
 
