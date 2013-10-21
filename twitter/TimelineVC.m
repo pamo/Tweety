@@ -150,7 +150,9 @@
 }
 
 - (void)onComposeButton {
-    [User setCurrentUser:nil];
+        ComposeViewController *composeViewController = [[ComposeViewController alloc] init];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:composeViewController];
+        [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (void)reload {
