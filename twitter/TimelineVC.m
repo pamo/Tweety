@@ -8,6 +8,8 @@
 
 #import "TimelineVC.h"
 #import "TweetCell.h"
+#import "ComposeViewController.h"
+#import "TweetViewController.h"
 #import <UIImageView+AFNetworking.h>
 
 @interface TimelineVC ()
@@ -128,7 +130,11 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    Tweet *tweet = self.tweets[indexPath.row];
+//    TweetViewController *vc = [[TweetViewController alloc] initWithTweet:tweet];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*
