@@ -30,6 +30,8 @@
 		42CC89B917B0D7DD00B6D34B /* NSDictionary+CPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CC89B817B0D7DD00B6D34B /* NSDictionary+CPAdditions.m */; };
 		42CC89BF17B0F02600B6D34B /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CC89BE17B0F02600B6D34B /* TweetCell.m */; };
 		4A2D263314064B2DA5BDFE0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC1DF52D3B94E9285F4C2F7 /* libPods.a */; };
+		9B7AA6261815034500301B77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7AA6251815034500301B77 /* SystemConfiguration.framework */; };
+		9B7AA6281815034C00301B77 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7AA6271815034C00301B77 /* MobileCoreServices.framework */; };
 		9BAD3BAD1813B0D900376C99 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD3BAB1813B0D900376C99 /* ComposeViewController.m */; };
 		9BAD3BAE1813B0D900376C99 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BAD3BAC1813B0D900376C99 /* ComposeViewController.xib */; };
 		9BAD3BB21813B11900376C99 /* TweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD3BB01813B11900376C99 /* TweetViewController.m */; };
@@ -83,6 +85,8 @@
 		42CC89BE17B0F02600B6D34B /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
 		42CC89C017B0F03E00B6D34B /* TweetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetCell.xib; sourceTree = "<group>"; };
 		6D8D3D6E0083406F961146BD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		9B7AA6251815034500301B77 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9B7AA6271815034C00301B77 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9BAD3BAA1813B0D900376C99 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		9BAD3BAB1813B0D900376C99 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		9BAD3BAC1813B0D900376C99 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7AA6281815034C00301B77 /* MobileCoreServices.framework in Frameworks */,
+				9B7AA6261815034500301B77 /* SystemConfiguration.framework in Frameworks */,
 				42CC892E17AF4C6A00B6D34B /* CoreGraphics.framework in Frameworks */,
 				42CC893017AF4C6A00B6D34B /* UIKit.framework in Frameworks */,
 				42CC892C17AF4C6A00B6D34B /* Foundation.framework in Frameworks */,
@@ -140,6 +146,8 @@
 		42CC892A17AF4C6A00B6D34B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B7AA6271815034C00301B77 /* MobileCoreServices.framework */,
+				9B7AA6251815034500301B77 /* SystemConfiguration.framework */,
 				42CC892B17AF4C6A00B6D34B /* Foundation.framework */,
 				42CC892D17AF4C6A00B6D34B /* CoreGraphics.framework */,
 				42CC892F17AF4C6A00B6D34B /* UIKit.framework */,
