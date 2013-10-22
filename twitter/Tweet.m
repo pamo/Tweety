@@ -7,6 +7,7 @@
 //
 
 #import "Tweet.h"
+#import <NSDate+TimeAgo.h>
 
 @implementation Tweet
 
@@ -21,12 +22,15 @@
 }
 - (NSString *)timestamp {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    [dateFormatter setDateFormat:@"EEE MMM dd HH:mm:ss Z yyyy"];
     NSString *rawTimestamp = [self.data valueOrNilForKeyPath:@"created_at"];
-    NSDate *date = [dateFormatter dateFromString:rawTimestamp];
     
-    NSString *formattedDate = [dateFormatter stringFromDate:date];
-    return [[self.data valueOrNilForKeyPath:@"created_at"] substringToIndex:10];
+//    NSDate *date = [dateFormatter dateFromString:rawTimestamp];
+    NSDate *date = [dateFormatter dateFromString:rawTimestamp];
+    NSString *timeAgo = [date timeAgo];
+    
+//    NSString *formattedDate = [dateFormatter stringFromDate:date];
+    return timeAgo;
 }
 
 
