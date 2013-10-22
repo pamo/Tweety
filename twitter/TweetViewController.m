@@ -7,24 +7,13 @@
 //
 
 #import "TweetViewController.h"
-
-@interface TweetViewController ()
--(id)initWithTweet:(Tweet *)tweet;
-@end
-
+#import "Tweet.h"
 @implementation TweetViewController
 
--(id)initWithTweet:(Tweet *)tweet{
+- (id)initWithTweet:(Tweet *)tweet {
+    self = [super initWithNibName:@"TweetViewController" bundle:nil];
     if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+        self.tweet = tweet;
     }
     return self;
 }
@@ -32,6 +21,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.userName.text = self.tweet.username;
+    self.timestamp.text = self.tweet.timestamp;
+    //        self.profilePic = tweet.profilePic;
+    self.tweetText.text = self.tweet.text;
     
 }
 

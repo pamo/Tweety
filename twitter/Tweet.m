@@ -26,8 +26,6 @@
     NSDate *date = [dateFormatter dateFromString:rawTimestamp];
     
     NSString *formattedDate = [dateFormatter stringFromDate:date];
-    NSLog(@"%@", rawTimestamp);
-    NSLog(@"%@", formattedDate);
     return [[self.data valueOrNilForKeyPath:@"created_at"] substringToIndex:10];
 }
 

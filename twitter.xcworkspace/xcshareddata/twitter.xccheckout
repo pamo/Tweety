@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>44F865C5-1788-4F9A-BC21-53E4253BF59E</string>
+	<string>779051BB-6033-49B8-AD12-3B67B0BDEBBB</string>
 	<key>IDESourceControlProjectName</key>
 	<string>twitter</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D5D3F891-16D6-4196-B951-04181469DD22</key>
-		<string>ssh://github.com/pamo/ios_twitter.git</string>
+		<key>11271B3B-74D4-4877-B0BA-5F1D76AB31C7</key>
+		<string>ssh://github.com/pamo/Tweety.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>twitter.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D5D3F891-16D6-4196-B951-04181469DD22</key>
+		<key>11271B3B-74D4-4877-B0BA-5F1D76AB31C7</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/pamo/ios_twitter.git</string>
+	<string>ssh://github.com/pamo/Tweety.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D5D3F891-16D6-4196-B951-04181469DD22</string>
+	<string>11271B3B-74D4-4877-B0BA-5F1D76AB31C7</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D5D3F891-16D6-4196-B951-04181469DD22</string>
+			<string>11271B3B-74D4-4877-B0BA-5F1D76AB31C7</string>
 			<key>IDESourceControlWCCName</key>
-			<string>tweet</string>
+			<string>Tweety</string>
 		</dict>
 	</array>
 </dict>
