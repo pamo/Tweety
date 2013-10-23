@@ -15,7 +15,7 @@
 @property (nonatomic, strong, readonly) NSString *username;
 @property (nonatomic, strong, readonly) NSString *profileImage;
 @property (nonatomic, strong, readonly) NSString *timestamp;
-
+@property (nonatomic, strong, readonly) NSString *timeAgo;
 + (NSMutableArray *)tweetsWithArray:(NSArray *)array;
 
 @end

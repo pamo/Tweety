@@ -28,16 +28,14 @@
     return [self.data valueOrNilForKeyPath:@"user.profile_image_url"];
 }
 - (NSString *)timestamp {
+   return [self.data valueOrNilForKeyPath:@"created_at"];
+}
+
+- (NSString *)timeAgo{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"EEE MMM dd HH:mm:ss Z yyyy"];
-    NSString *rawTimestamp = [self.data valueOrNilForKeyPath:@"created_at"];
-    
-//    NSDate *date = [dateFormatter dateFromString:rawTimestamp];
-    NSDate *date = [dateFormatter dateFromString:rawTimestamp];
-    NSString *timeAgo = [date timeAgo];
-    
-//    NSString *formattedDate = [dateFormatter stringFromDate:date];
-    return timeAgo;
+    NSDate *date = [dateFormatter dateFromString:self.timestamp];
+    return [date timeAgo];
 }
 
 
