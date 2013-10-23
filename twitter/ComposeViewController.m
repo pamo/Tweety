@@ -47,5 +47,7 @@
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          NSLog(@"%@", error);
      }];
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 @end
