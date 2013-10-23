@@ -73,7 +73,7 @@ static NSString * const kAccessTokenKey = @"kAccessTokenKey";
 }
 
 - (void)tweet:(NSString *)tweetText inReplyToTweetID:(NSString *)inReplyToTweetID success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"text": tweetText}];
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"status": tweetText}];
     if (inReplyToTweetID) {
         [params setObject:inReplyToTweetID forKey:@"in_reply_to_status_id"];
     }

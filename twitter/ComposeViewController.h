@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ComposeViewController : UIViewController
-
+@property (weak, nonatomic) NSString *replyTweetID;
 @end

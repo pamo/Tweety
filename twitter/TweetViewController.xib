@@ -54,6 +54,7 @@
                     </segments>
                     <connections>
                         <action selector="onFavorite:" destination="-1" eventType="valueChanged" id="FBU-yJ-2XP"/>
+                        <action selector="onReply:" destination="-1" eventType="valueChanged" id="Kc0-6s-ddf"/>
                         <action selector="onRetweet:" destination="-1" eventType="valueChanged" id="Uvg-id-UPw"/>
                     </connections>
                 </segmentedControl>

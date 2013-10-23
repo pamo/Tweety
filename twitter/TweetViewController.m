@@ -10,6 +10,7 @@
 #import "Tweet.h"
 #import "TweetCell.h"
 #import "TwitterClient.h"
+#import "ComposeViewController.h"
 
 @implementation TweetViewController
 
@@ -40,7 +41,10 @@
 }
 
 - (IBAction)onReply:(id)sender{
-    // Go to next view with tweet id
+    ComposeViewController *composeViewController = [[ComposeViewController alloc] init];
+    composeViewController.replyTweetID = self.tweetCell.tweetID;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:composeViewController];
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 - (IBAction)onRetweet:(id)sender{
     [[TwitterClient instance] retweet:self.tweetCell.tweetID success:^(AFHTTPRequestOperation *operation, id response) {
