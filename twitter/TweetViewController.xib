@@ -53,6 +53,7 @@
                         <segment title="Favorite"/>
                     </segments>
                     <connections>
+                        <action selector="onFavorite:" destination="-1" eventType="valueChanged" id="FBU-yJ-2XP"/>
                         <action selector="onRetweet:" destination="-1" eventType="valueChanged" id="Uvg-id-UPw"/>
                     </connections>
                 </segmentedControl>

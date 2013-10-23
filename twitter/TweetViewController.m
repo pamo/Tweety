@@ -51,7 +51,12 @@
     }];
 }
 - (IBAction)onFavorite:(id)sender{
-    
+    [[TwitterClient instance] favorite:self.tweetCell.tweetID success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"Tweet %@ Favorited!", self.tweetCell.textLabel.text);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 @end
