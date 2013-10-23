@@ -10,4 +10,5 @@
 
 @interface ComposeViewController : UIViewController
 @property (weak, nonatomic) NSString *replyTweetID;
+@property (weak, nonatomic) NSString *replyTweetUsername;
 @end

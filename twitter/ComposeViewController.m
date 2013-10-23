@@ -41,6 +41,15 @@
 }
 
 - (void)onTweetButton {
+    
+    NSString *tweetText = self.textField.text;
+    NSLog(@"%@", self.replyTweetID);
+    NSLog(@"%@", self.replyTweetUsername);
+    if (self.replyTweetID != nil) {
+        tweetText = [NSString stringWithFormat:@"%@: %@", self.replyTweetUsername, self.textField.text];
+    }
+    NSLog(@"%@", tweetText);
+    
     [[TwitterClient instance] tweet:self.textField.text
      inReplyToTweetID:self.replyTweetID success:^(AFHTTPRequestOperation *operation, id response) {
          NSLog(@"Successful tweet!");

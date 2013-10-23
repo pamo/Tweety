@@ -15,4 +15,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
 @property (weak, nonatomic) NSString *tweetID;
+@property (weak, nonatomic) NSString *username;
 @end

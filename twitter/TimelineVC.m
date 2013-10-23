@@ -70,7 +70,12 @@
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
     Tweet *tweet = self.tweets[indexPath.row];
+    
     cell.tweetID = tweet.tweetID;
+    cell.username = tweet.username;
+    NSLog(@"%@", cell.username);
+    
+    
     cell.nameLabel.text = tweet.name;
     cell.tweetTextLabel.text = tweet.text;
     cell.timestampLabel.text = tweet.timeAgo;
@@ -92,8 +97,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    Tweet *tweet = self.tweets[indexPath.row];
+    Tweet *tweet = self.tweets[indexPath.row];
     TweetCell *cell = (TweetCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    
+    cell.username = tweet.username;
+    cell.tweetID = tweet.tweetID;
+    NSLog(@"%@", cell.username);
+    
     TweetViewController *vc = [[TweetViewController alloc] initWithTweet:cell];
     [self.navigationController pushViewController:vc animated:YES];
 }

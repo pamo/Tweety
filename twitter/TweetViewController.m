@@ -43,6 +43,8 @@
 - (IBAction)onReply:(id)sender{
     ComposeViewController *composeViewController = [[ComposeViewController alloc] init];
     composeViewController.replyTweetID = self.tweetCell.tweetID;
+    composeViewController.replyTweetUsername = self.tweetCell.username;
+
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:composeViewController];
     [self presentViewController:navigationController animated:YES completion:nil];
 }
