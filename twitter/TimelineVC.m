@@ -73,7 +73,7 @@
 
     cell.nameLabel.text = tweet.name;
     cell.tweetTextLabel.text = tweet.text;
-    cell.timestampLabel.text = tweet.timestamp;
+    cell.timestampLabel.text = tweet.timeAgo;
     [cell.profileImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:tweet.profileImage]] placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         cell.profileImageView.image = image;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
