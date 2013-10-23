@@ -22,7 +22,7 @@
                             <constraint firstAttribute="width" constant="80" id="mPS-0P-yJ4"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r12-Z4-zK1">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r12-Z4-zK1">
                         <rect key="frame" x="100" y="10" width="100" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -63,10 +63,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="profilePic" destination="30U-qL-hSn" id="pNt-6Q-ZFA"/>
-                <outlet property="tweetContent" destination="JRQ-sD-ORY" id="WG2-Ce-QiE"/>
-                <outlet property="tweetTimeStamp" destination="TP3-dV-FBA" id="bZE-if-51h"/>
-                <outlet property="usernameLabel" destination="r12-Z4-zK1" id="pbU-7y-8Fk"/>
+                <outlet property="nameLabel" destination="r12-Z4-zK1" id="NXC-Vn-APX"/>
+                <outlet property="profileImageView" destination="30U-qL-hSn" id="BrT-kP-5Jm"/>
+                <outlet property="timestampLabel" destination="TP3-dV-FBA" id="QbV-X7-zQX"/>
+                <outlet property="tweetTextLabel" destination="JRQ-sD-ORY" id="1yn-ut-jJ0"/>
             </connections>
         </tableViewCell>
     </objects>

@@ -11,13 +11,20 @@
 
 @implementation Tweet
 
+
+- (NSString *)tweetID {
+    return [self.data valueOrNilForKeyPath:@"id"];
+}
 - (NSString *)text {
     return [self.data valueOrNilForKeyPath:@"text"];
 }
-- (NSString *)username {
+- (NSString *)name {
     return [self.data valueOrNilForKeyPath:@"user.name"];
 }
-- (NSString *)profilePic {
+- (NSString *)username {
+    return [self.data valueOrNilForKeyPath:@"user.screen_name"];
+}
+- (NSString *)profileImage {
     return [self.data valueOrNilForKeyPath:@"user.profile_image_url"];
 }
 - (NSString *)timestamp {

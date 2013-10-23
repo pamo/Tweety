@@ -8,12 +8,13 @@
 
 #import "TweetViewController.h"
 #import "Tweet.h"
+#import "TweetCell.h"
 @implementation TweetViewController
 
-- (id)initWithTweet:(Tweet *)tweet {
+- (id)initWithTweet:(TweetCell *)tweetCell {
     self = [super initWithNibName:@"TweetViewController" bundle:nil];
     if (self) {
-        self.tweet = tweet;
+        self.tweetCell = tweetCell;
     }
     return self;
 }
@@ -22,10 +23,11 @@
 {
     [super viewDidLoad];
     
-    self.userName.text = self.tweet.username;
-    self.timestamp.text = self.tweet.timestamp;
-    //        self.profilePic = tweet.profilePic;
-    self.tweetText.text = self.tweet.text;
+    self.name.text = self.tweetCell.nameLabel.text;
+    self.timestamp.text = self.tweetCell.timestampLabel.text;
+    self.tweetText.text = self.tweetCell.tweetTextLabel.text;
+    self.profileImage = self.tweetCell.profileImageView;
+    NSLog(@"%@", self.name);
     
 }
 

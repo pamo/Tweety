@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TweetCell.h"
 
 @interface TweetViewController : UIViewController
-- (id)initWithTweet:(Tweet *)tweet;
+- (id)initWithTweet:(TweetCell *)tweetCell;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tweetControls;
 @property (weak, nonatomic) IBOutlet UILabel *tweetText;
 @property (weak, nonatomic) IBOutlet UILabel *timestamp;
-@property (weak, nonatomic) IBOutlet UILabel *userName;
-@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
-@property (weak, nonatomic) Tweet *tweet;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+//@property (weak, nonatomic) Tweet *tweet;
+@property (weak, nonatomic) TweetCell *tweetCell;
 @end

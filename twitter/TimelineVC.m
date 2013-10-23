@@ -71,11 +71,11 @@
 
     Tweet *tweet = self.tweets[indexPath.row];
 
-    cell.usernameLabel.text = tweet.username;
-    cell.tweetContent.text = tweet.text;
-    cell.tweetTimeStamp.text = tweet.timestamp;
-    [cell.profilePic setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:tweet.profilePic]] placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-        cell.profilePic.image = image;
+    cell.nameLabel.text = tweet.name;
+    cell.tweetTextLabel.text = tweet.text;
+    cell.timestampLabel.text = tweet.timestamp;
+    [cell.profileImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:tweet.profileImage]] placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        cell.profileImageView.image = image;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
         NSLog(@"%@", error);
     }];
@@ -92,8 +92,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    Tweet *tweet = self.tweets[indexPath.row];
-    TweetViewController *vc = [[TweetViewController alloc] initWithTweet:tweet];
+//    Tweet *tweet = self.tweets[indexPath.row];
+    TweetCell *cell = (TweetCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    TweetViewController *vc = [[TweetViewController alloc] initWithTweet:cell];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
