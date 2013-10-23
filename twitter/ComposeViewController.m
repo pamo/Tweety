@@ -7,10 +7,11 @@
 //
 
 #import "ComposeViewController.h"
+#import "TwitterClient.h"
 
 @interface ComposeViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-
+@property (weak, nonatomic) NSString *replyTweetID;
 @end
 
 @implementation ComposeViewController
@@ -41,8 +42,11 @@
 }
 
 - (void)onTweetButton {
-    ComposeViewController *composeViewController = [[ComposeViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:composeViewController];
-    [self presentViewController:navigationController animated:YES completion:nil];
+    [[TwitterClient instance] tweet:self.textField.text
+     inReplyToTweetID:self.replyTweetID success:^(AFHTTPRequestOperation *operation, id response) {
+         NSLog(@"Successful tweet!");
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         NSLog(@"%@", error);
+     }];
 }
 @end

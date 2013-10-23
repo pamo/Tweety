@@ -40,7 +40,7 @@
 }
 
 - (IBAction)onReply:(id)sender{
-    
+    // Go to next view with tweet id
 }
 - (IBAction)onRetweet:(id)sender{
     [[TwitterClient instance] retweet:self.tweetCell.tweetID success:^(AFHTTPRequestOperation *operation, id response) {

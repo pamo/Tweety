@@ -24,7 +24,7 @@
 
 - (void)retweet:(NSString *)tweetID success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
-- (void)reply:(NSString *)tweetText inReplyTo:(NSString *)inReplyTo success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+- (void)tweet:(NSString *)tweetText inReplyToTweetID:(NSString *)inReplyToTweetID success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 - (void)favorite:(NSString *)tweetID success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
