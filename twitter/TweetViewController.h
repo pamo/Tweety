@@ -13,7 +13,6 @@
 - (id)initWithTweet:(TweetCell *)tweetCell;
 @property (weak, nonatomic) TweetCell *tweetCell;
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *tweetControls;
 @property (weak, nonatomic) IBOutlet UILabel *tweetText;
 @property (weak, nonatomic) IBOutlet UILabel *timestamp;
 @property (weak, nonatomic) IBOutlet UILabel *name;
