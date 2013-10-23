@@ -22,7 +22,7 @@
     return [self.data valueOrNilForKeyPath:@"user.name"];
 }
 - (NSString *)username {
-    return [self.data valueOrNilForKeyPath:@"user.screen_name"];
+    return [NSString stringWithFormat:@"@%@", [self.data valueOrNilForKeyPath:@"user.screen_name"]];
 }
 - (NSString *)profileImage {
     return [self.data valueOrNilForKeyPath:@"user.profile_image_url"];
