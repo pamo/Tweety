@@ -70,7 +70,7 @@
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
     Tweet *tweet = self.tweets[indexPath.row];
-
+    cell.tweetID = tweet.tweetID;
     cell.nameLabel.text = tweet.name;
     cell.tweetTextLabel.text = tweet.text;
     cell.timestampLabel.text = tweet.timeAgo;
