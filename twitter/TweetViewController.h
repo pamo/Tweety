@@ -11,11 +11,15 @@
 
 @interface TweetViewController : UIViewController
 - (id)initWithTweet:(TweetCell *)tweetCell;
+@property (weak, nonatomic) TweetCell *tweetCell;
+
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tweetControls;
 @property (weak, nonatomic) IBOutlet UILabel *tweetText;
 @property (weak, nonatomic) IBOutlet UILabel *timestamp;
 @property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
-//@property (weak, nonatomic) Tweet *tweet;
-@property (weak, nonatomic) TweetCell *tweetCell;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+
+- (IBAction)onReply:(id)sender;
+- (IBAction)onRetweet:(id)sender;
+- (IBAction)onFavorite:(id)sender;
 @end

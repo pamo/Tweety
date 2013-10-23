@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TweetViewController">
             <connections>
                 <outlet property="name" destination="ieY-xQ-TLY" id="liN-Ml-Fez"/>
-                <outlet property="profileImage" destination="5DN-XF-IIx" id="Czg-Bo-Ram"/>
+                <outlet property="profileImageView" destination="5DN-XF-IIx" id="NH9-3H-f7z"/>
                 <outlet property="timestamp" destination="HO5-b0-NQu" id="aJi-Dm-fJr"/>
                 <outlet property="tweetControls" destination="yKZ-F2-K25" id="D8X-ZS-Q7z"/>
                 <outlet property="tweetText" destination="JZf-MJ-dlr" id="npC-cy-ano"/>
@@ -52,6 +52,9 @@
                         <segment title="Retweet"/>
                         <segment title="Favorite"/>
                     </segments>
+                    <connections>
+                        <action selector="onRetweet:" destination="-1" eventType="valueChanged" id="Uvg-id-UPw"/>
+                    </connections>
                 </segmentedControl>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="JZf-MJ-dlr">
                     <rect key="frame" x="20" y="130" width="43" height="17"/>

@@ -9,6 +9,8 @@
 #import "TweetViewController.h"
 #import "Tweet.h"
 #import "TweetCell.h"
+#import "TwitterClient.h"
+
 @implementation TweetViewController
 
 - (id)initWithTweet:(TweetCell *)tweetCell {
@@ -26,7 +28,7 @@
     self.name.text = self.tweetCell.nameLabel.text;
     self.timestamp.text = self.tweetCell.timestampLabel.text;
     self.tweetText.text = self.tweetCell.tweetTextLabel.text;
-    self.profileImage = self.tweetCell.profileImageView;
+    self.profileImageView = self.tweetCell.profileImageView;
     NSLog(@"%@", self.name);
     
 }
@@ -35,6 +37,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onReply:(id)sender{
+    
+}
+- (IBAction)onRetweet:(id)sender{
+    [[TwitterClient instance] retweet:self.tweetCell.tweetID success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"Retweet Success!");
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
+- (IBAction)onFavorite:(id)sender{
+    
 }
 
 @end
