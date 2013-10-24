@@ -18,6 +18,8 @@
     self = [super initWithNibName:@"TweetViewController" bundle:nil];
     if (self) {
         self.tweetCell = tweetCell;
+        NSLog(@"init %@", self.usernameLabel.text);
+
     }
     return self;
 }
@@ -27,10 +29,11 @@
     [super viewDidLoad];
     
     self.name.text = self.tweetCell.nameLabel.text;
+    self.usernameLabel.text = self.tweetCell.usernameLabel.text;
     self.timestamp.text = self.tweetCell.timestampLabel.text;
     self.tweetText.text = self.tweetCell.tweetTextLabel.text;
-    self.profileImageView = self.tweetCell.profileImageView;
-    NSLog(@"%@", self.name);
+    self.profileImageView.image = self.tweetCell.profileImageView.image;
+    NSLog(@"view load %@", self.usernameLabel.text);
     
 }
 
@@ -41,9 +44,11 @@
 }
 
 - (IBAction)onReply:(id)sender{
-    ComposeViewController *composeViewController = [[ComposeViewController alloc] init];
-    composeViewController.replyTweetID = self.tweetCell.tweetID;
-    composeViewController.replyTweetUsername = self.tweetCell.username;
+
+    NSLog(@"onReply: %@", self.usernameLabel.text);
+
+    ComposeViewController *composeViewController = [[ComposeViewController alloc] initWithNibName:@"ComposeViewController"
+ andTweet:self.usernameLabel.text inReplyToTweetId:self.tweetCell.tweetID bundle:nil];
 
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:composeViewController];
     [self presentViewController:navigationController animated:YES completion:nil];

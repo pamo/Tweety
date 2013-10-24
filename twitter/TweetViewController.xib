@@ -11,6 +11,7 @@
                 <outlet property="profileImageView" destination="oZR-TA-dTZ" id="ebA-IJ-KFj"/>
                 <outlet property="timestamp" destination="Y12-ev-UXf" id="jz9-fC-xhJ"/>
                 <outlet property="tweetText" destination="4ES-yS-hhH" id="6ud-Qj-b2i"/>
+                <outlet property="usernameLabel" destination="vTv-dl-zYl" id="eio-xU-mXv"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -35,7 +36,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timestamp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y12-ev-UXf">
-                    <rect key="frame" x="130" y="113" width="150" height="17"/>
+                    <rect key="frame" x="130" y="121" width="150" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -80,24 +81,35 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTv-dl-zYl">
+                    <rect key="frame" x="130" y="96" width="150" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="vTv-dl-zYl" firstAttribute="leading" secondItem="s89-xb-Mj1" secondAttribute="leading" id="406-xY-iuY"/>
                 <constraint firstItem="hxG-az-PGI" firstAttribute="leading" secondItem="eUt-uQ-Q6g" secondAttribute="trailing" constant="27" id="5sa-DY-WJL"/>
-                <constraint firstItem="j12-cO-4bI" firstAttribute="top" secondItem="Y12-ev-UXf" secondAttribute="bottom" constant="9" id="6X4-eY-rwY"/>
+                <constraint firstItem="j12-cO-4bI" firstAttribute="top" secondItem="Y12-ev-UXf" secondAttribute="bottom" constant="1" id="6X4-eY-rwY"/>
                 <constraint firstItem="eUt-uQ-Q6g" firstAttribute="leading" secondItem="s89-xb-Mj1" secondAttribute="leading" id="7MA-95-lDr"/>
                 <constraint firstAttribute="trailing" secondItem="4ES-yS-hhH" secondAttribute="trailing" constant="20" id="7ln-Ze-i9j"/>
-                <constraint firstItem="Y12-ev-UXf" firstAttribute="top" secondItem="s89-xb-Mj1" secondAttribute="bottom" constant="12" id="8xW-8E-Y79"/>
+                <constraint firstItem="Y12-ev-UXf" firstAttribute="top" secondItem="s89-xb-Mj1" secondAttribute="bottom" constant="20" id="8xW-8E-Y79"/>
                 <constraint firstItem="s89-xb-Mj1" firstAttribute="leading" secondItem="oZR-TA-dTZ" secondAttribute="trailing" constant="10" id="9jH-ax-pbh"/>
                 <constraint firstItem="j12-cO-4bI" firstAttribute="trailing" secondItem="s89-xb-Mj1" secondAttribute="trailing" id="B8N-qO-ipP"/>
                 <constraint firstItem="j12-cO-4bI" firstAttribute="leading" secondItem="hxG-az-PGI" secondAttribute="trailing" constant="24" id="BWx-ZG-Aj4"/>
-                <constraint firstItem="eUt-uQ-Q6g" firstAttribute="top" secondItem="Y12-ev-UXf" secondAttribute="bottom" constant="8" symbolic="YES" id="CUT-9T-NaQ"/>
+                <constraint firstItem="eUt-uQ-Q6g" firstAttribute="top" secondItem="Y12-ev-UXf" secondAttribute="bottom" id="CUT-9T-NaQ"/>
                 <constraint firstItem="eUt-uQ-Q6g" firstAttribute="leading" secondItem="Y12-ev-UXf" secondAttribute="leading" id="Hcz-c2-X9M"/>
                 <constraint firstItem="j12-cO-4bI" firstAttribute="trailing" secondItem="Y12-ev-UXf" secondAttribute="trailing" id="PUx-RH-2y5"/>
                 <constraint firstItem="4ES-yS-hhH" firstAttribute="leading" secondItem="oZR-TA-dTZ" secondAttribute="leading" id="QrB-J5-TtU"/>
                 <constraint firstItem="4ES-yS-hhH" firstAttribute="top" secondItem="oZR-TA-dTZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Xac-hz-g4L"/>
+                <constraint firstItem="vTv-dl-zYl" firstAttribute="trailing" secondItem="s89-xb-Mj1" secondAttribute="trailing" id="ZEl-FC-rkX"/>
+                <constraint firstItem="vTv-dl-zYl" firstAttribute="top" secondItem="1" secondAttribute="top" constant="96" id="elA-7f-6z2"/>
                 <constraint firstItem="oZR-TA-dTZ" firstAttribute="top" secondItem="1" secondAttribute="top" constant="80" id="h0E-3h-iEB"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4ES-yS-hhH" secondAttribute="bottom" constant="20" id="nqF-ly-9iu"/>
+                <constraint firstItem="Y12-ev-UXf" firstAttribute="top" secondItem="vTv-dl-zYl" secondAttribute="bottom" constant="4" id="o58-Xg-qc9"/>
                 <constraint firstItem="s89-xb-Mj1" firstAttribute="top" secondItem="oZR-TA-dTZ" secondAttribute="top" id="sDb-rr-WSJ"/>
                 <constraint firstItem="eUt-uQ-Q6g" firstAttribute="baseline" secondItem="hxG-az-PGI" secondAttribute="baseline" id="vCc-lh-IC5"/>
                 <constraint firstItem="oZR-TA-dTZ" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="zDM-pC-zND"/>

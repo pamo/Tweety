@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ComposeViewController : UIViewController
-@property (weak, nonatomic) NSString *replyTweetID;
-@property (weak, nonatomic) NSString *replyTweetUsername;
+- (id)initWithNibName:(NSString *)nibNameOrNil andTweet:(NSString *)tweetText inReplyToTweetId:(NSString *)tweetId bundle:(NSBundle *)nibBundleOrNil;
+- (id)initWithNibName:(NSString *)nibNameOrNil andTweet:(NSString *)tweetText bundle:(NSBundle *)nibBundleOrNil;
+
 @end

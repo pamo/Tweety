@@ -71,12 +71,8 @@
 
     Tweet *tweet = self.tweets[indexPath.row];
     
-    cell.tweetID = tweet.tweetID;
-    cell.username = tweet.username;
-    NSLog(@"%@", cell.username);
-    
-    
     cell.nameLabel.text = tweet.name;
+    cell.usernameLabel.text = tweet.username;
     cell.tweetTextLabel.text = tweet.text;
     cell.timestampLabel.text = tweet.timeAgo;
     [cell.profileImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:tweet.profileImage]] placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
@@ -97,12 +93,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     Tweet *tweet = self.tweets[indexPath.row];
     TweetCell *cell = (TweetCell *)[self.tableView cellForRowAtIndexPath:indexPath];
     
     cell.username = tweet.username;
     cell.tweetID = tweet.tweetID;
     NSLog(@"%@", cell.username);
+    NSLog(@"%@", cell.tweetID);
     
     TweetViewController *vc = [[TweetViewController alloc] initWithTweet:cell];
     [self.navigationController pushViewController:vc animated:YES];

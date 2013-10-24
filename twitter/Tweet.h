@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface Tweet : RestObject
-@property (nonatomic, strong, readonly) NSString *tweetID;
-@property (nonatomic, strong, readonly) NSString *text;
-@property (nonatomic, strong, readonly) NSString *name;
-@property (nonatomic, strong, readonly) NSString *username;
-@property (nonatomic, strong, readonly) NSString *profileImage;
-@property (nonatomic, strong, readonly) NSString *timestamp;
-@property (nonatomic, strong, readonly) NSString *timeAgo;
+@property (nonatomic, strong) NSString *tweetID;
+@property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSString *profileImage;
+@property (nonatomic, strong) NSString *timestamp;
+@property (nonatomic, strong) NSString *timeAgo;
 + (NSMutableArray *)tweetsWithArray:(NSArray *)array;
 
 @end

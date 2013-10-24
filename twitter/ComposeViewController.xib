@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeViewController">
             <connections>
-                <outlet property="textField" destination="fQa-V0-Y8G" id="s7l-jL-RR9"/>
+                <outlet property="tweetTextField" destination="fQa-V0-Y8G" id="YrS-KI-z34"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>

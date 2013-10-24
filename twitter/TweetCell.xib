@@ -45,6 +45,16 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t4-cd-LY8">
+                        <rect key="frame" x="98" y="27" width="100" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="1HE-Lj-SHf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="TP3-dV-FBA" secondAttribute="trailing" constant="30" id="1Hy-ab-UCz"/>
@@ -67,6 +77,7 @@
                 <outlet property="profileImageView" destination="30U-qL-hSn" id="BrT-kP-5Jm"/>
                 <outlet property="timestampLabel" destination="TP3-dV-FBA" id="QbV-X7-zQX"/>
                 <outlet property="tweetTextLabel" destination="JRQ-sD-ORY" id="1yn-ut-jJ0"/>
+                <outlet property="usernameLabel" destination="7t4-cd-LY8" id="1Wx-G7-1gK"/>
             </connections>
         </tableViewCell>
     </objects>

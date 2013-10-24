@@ -12,6 +12,8 @@
 @interface TweetViewController : UIViewController
 - (id)initWithTweet:(TweetCell *)tweetCell;
 @property (weak, nonatomic) TweetCell *tweetCell;
+@property (weak, nonatomic) NSString *username;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *tweetText;
 @property (weak, nonatomic) IBOutlet UILabel *timestamp;
